@@ -13,7 +13,7 @@ class SkillManager:
             self._candidato_habilidades[nome] = habilidades
         else:
             raise TypeError(
-                f"""Invalid type for nome or habilidades parameters: nome: {nome}, habilidades: {habilidades}. Expected str(nome) and set(habilidades)"""
+                f"""Invalid type for nome or habilidades parameters: nome: {type(nome)}, habilidades: {type(habilidades)}. Expected str(nome) and set(habilidades)"""
             )
 
     def adicionar_cargo(self,nome:str, requisitos:set):
@@ -21,7 +21,7 @@ class SkillManager:
             self._requisitos_cargo[nome] = requisitos
         else:
             raise TypeError(
-                f"""Invalid type for nome or habilidades parameters: nome: {nome}, requisitos: {requisitos}. Expected str(nome) and set(requisitos)"""
+                f"""Invalid type for nome or habilidades parameters: nome: {type(nome)}, requisitos: {type(requisitos)}. Expected str(nome) and set(requisitos)"""
             )
 
     def verificar_compatibilidade(self,candidato:str,cargo:str):
