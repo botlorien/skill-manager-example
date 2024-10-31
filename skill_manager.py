@@ -59,3 +59,5 @@ if __name__=='__main__':
         )
     )
     
+    # Exibindo a representação da classe
+    print(sk)
